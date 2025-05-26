@@ -1,1 +1,159 @@
-"Hola Mundo" 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Desarrolladora Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      background-color: #fdf6f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #bae6fd;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .hero {
+      background-color: #ffe4f0;
+      padding: 2em;
+      text-align: center;
+    }
+
+    section {
+      padding: 2em;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .bar {
+      background-color: #eee;
+      border-radius: 25px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(to right, #bae6fd, #fbcfe8);
+      width: 0;
+      animation: fillBar 2s forwards;
+    }
+
+    @keyframes fillBar {
+      to {
+        width: inherit;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #bae6fd;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Mi Portfolio</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h2 id="typed-text"></h2>
+    <p>He trabajado en la Junta de Andalucía y en GKT Studios como desarrolladora de software, construyendo soluciones innovadoras.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills y Herramientas</h2>
+    <div class="skill">
+      <p>Java</p>
+      <div class="bar"><div class="progress" style="width: 90%"></div></div>
+    </div>
+    <div class="skill">
+      <p>React</p>
+      <div class="bar"><div class="progress" style="width: 85%"></div></div>
+    </div>
+    <div class="skill">
+      <p>Spring Boot</p>
+      <div class="bar"><div class="progress" style="width: 80%"></div></div>
+    </div>
+    <div class="skill">
+      <p>Git & GitHub</p>
+      <div class="bar"><div class="progress" style="width: 90%"></div></div>
+    </div>
+  </section>
+
+  <section id="formacion">
+    <h2>Formación</h2>
+    <ul>
+      <li>Grado en Pedagogía - Universidad de Sevilla</li>
+      <li>FP Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</li>
+      <li>Curso de Certificación en Java 11</li>
+    </ul>
+  </section>
+
+  <section id="cv">
+    <h2>Descargar CV</h2>
+    <p>Puedes descargar mi currículum en formato PDF desde el siguiente enlace:</p>
+    <a href="PatriciaMartosMoreno - CV.pdf" download>Descargar CV</a>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres ponerte en contacto conmigo?</p>
+    <p>Escríbeme a: <a href="mailto:patriciamartosmoreno@gmail.com">patriciamartosmoreno@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Desarrolladora de Software</p>
+  </footer>
+
+  <script>
+    const texto = "Hola, soy desarrolladora de software.";
+    let i = 0;
+
+    function escribir() {
+      if (i < texto.length) {
+        document.getElementById("typed-text").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", escribir);
+  </script>
+</body>
+</html>
