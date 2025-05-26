@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Desarrolladora Software</title>
@@ -74,7 +75,56 @@
       background-color: #bae6fd;
       color: #333;
     }
-  </style>
+  
+    .hidden {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav a {
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #333;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    #typed-text::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    a {
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    a:hover {
+      background-color: #fbcfe8;
+      transform: scale(1.05);
+    }
+    </style>
 </head>
 <body>
 
@@ -154,6 +204,37 @@
     }
 
     document.addEventListener("DOMContentLoaded", escribir);
-  </script>
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('hidden');
+      observer.observe(section);
+    });
+
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target.querySelector('.progress');
+          if (bar && bar.dataset.width) {
+            bar.style.width = bar.dataset.width;
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('.skill').forEach(skill => {
+      const bar = skill.querySelector('.progress');
+      bar.dataset.width = bar.style.width;
+      bar.style.width = '0';
+      skillObserver.observe(skill);
+    });
+    </script>
 </body>
 </html>
