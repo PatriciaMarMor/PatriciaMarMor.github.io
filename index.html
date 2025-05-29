@@ -6,14 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Patricia Martos Moreno</title>
     <!-- Estilos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-
-    <!-- FUENTES GOOGLE -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     </head>
@@ -22,14 +16,12 @@
     <header class="header">  
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <div class="containerHeader">
+          <section class="containerFluid">
+            <div class="containerPhoto">
               <img src="./media/img.jpg" class="img-fluid rounded rounded-circle float-start border border-5" alt="Patricia">
               <p class="name">Patricia Martos</p>
             </div>
-          </div>
-          <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
-            <div class="containerHeader">
+            <div class="containerDescription">
               <p class="tittleJob">Software Developer</p>
               <p class="description">📚 Mi camino en el desarrollo de software comenzó con  con el ciclo de Aplicaciones Multiplataforma, 
                 que despertó en mí una gran curiosidad por entender cómo se construyen las aplicaciones que usamos cada día. <br><br>👩🏻‍💻 Desde 
@@ -48,7 +40,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </section>          
         </div>
       </div>
     </header>
@@ -79,8 +71,51 @@
       <main>
         <section class="proyectos">
           <div id="proyectos">
-            <h1>Proyectos</h1>
-          </div>
+            <div class="carousel">
+              <div class="slider">
+                <div class="slider-wrapper flex">
+                  <div class="slide flex">
+                    <div class="slide-image slider-link prev"><img src="./media/JuntadeAndalucia.png"><div class="overlay"></div></div>
+                    <div class="slide-content">
+                      <div class="slide-date"><strong>02-12-2024.</strong></div>
+                      <div class="slide-title"><strong>Desarrolladora de software (interinidad)</strong></div>
+                      <div class="slide-text">Formé parte de un equipo encargado de la gestión de proyectos tecnológicos impulsados por la 
+                        Junta de Andalucía. Participé en el <strong>desarrollo y mantenimiento de microservicios basados en Java</strong>, 
+                        colaborando en su integración con los sistemas existentes. </div>
+                    </div>	
+                  </div>
+                  <div class="slide flex">
+                    <div class="slide-image slider-link next"><img src="./media/GKTStudios.jpg"><div class="overlay"></div></div>
+                    <div class="slide-content">
+                      <div class="slide-date"><strong>17-03-2024.</strong></div>
+                      <div class="slide-title"><strong>Desarrolladora de software (prácticas)</strong></div>
+                      <div class="slide-text">Lideré y programé diversos proyectos relacionados con <strong>React, incluyendo TypeScript, 
+                        JavaScript y React Three Fiber</strong> y realicé en <strong>WordPress</strong> la página oficial de un conocido 
+                        equipo de fútbol.<br><br>Por la parte Back End, se realizaron proyectos que utilizaban <strong>Spring Boot (JPA y 
+                        JDBC) con Java</strong> en Eclipse.
+                      </div>
+                    </div>	
+                  </div>	
+                  <div class="slide flex">
+                    <div class="slide-image slider-link next"><img src="./media/BoxInOut.jpg"><div class="overlay"></div></div>
+                    <div class="slide-content">
+                      <div class="slide-date"><strong>01-02-2024</strong></div>
+                      <div class="slide-title"><strong>BoxInOut (Trabajo de fin de FP)</strong></div>
+                      <div class="slide-text"> Este trabajo de fin de FP tiene como objetivo encontrar rápida y eficazmente los objetos de 
+                        uso cotidiano en el hogar con una sola aplicación. Consta de multiples funcionalidades como administrar tus propios 
+                        usuarios, cajas, objetos, QRs, entre otras.<br><br>
+                        Está basado en <strong>React y React Three Fiber</strong> para su parte Front End, <strong>Spring Boot con JDBC</strong>
+                        para la lógica y <strong>MySql</strong> como base de datos.</div>
+                    </div>	
+                  </div>
+                </div>
+                <div class="arrows">
+                <a href="#" title="Previous" class="arrow slider-link prev"></a>
+                <a href="#" title="Next" class="arrow slider-link next"></a>
+                </div>
+              </div>
+            </div>
+          </div> 
         </section>
         <section class="habilidades">
           <div id="habilidades">
@@ -110,40 +145,13 @@
         <p class="politica">Política de Privacidad</p>
       </footer>
 
+    <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+   
     <!--Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    
-    <!--Script Frase-->
-    <script>
-      const boldText = "'La tecnología cambia rápido, pero la actitud de aprender es lo que marca la diferencia.'";
-      const normalText = "— esa es mi filosofía. ¿Conectamos? 👇";
-      
-      const boldTarget = document.getElementById("boldPart");
-      const normalTarget = document.getElementById("normalPart");
-
-    let i = 0;
-
-      function typeBold() {
-        if (i < boldText.length) {
-          boldTarget.textContent += boldText.charAt(i);
-          i++;
-          setTimeout(typeBold, 50);
-        } else {
-          i = 0;
-          typeNormal();
-        }
-      }
-
-      function typeNormal() {
-        if (i < normalText.length) {
-          normalTarget.textContent += normalText.charAt(i);
-          i++;
-          setTimeout(typeNormal, 50);
-        }
-      }
-
-      typeBold();
-    </script>
+    <script src="./scripts/phrase.js"></script>
+    <script src="./scripts/slider.js"></script>
 
   </body>
 </html>
