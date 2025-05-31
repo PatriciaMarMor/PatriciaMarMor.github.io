@@ -48,5 +48,3 @@
           
   });
 })(jQuery);
-
-$('.overlay').addClass('overlay-blue');

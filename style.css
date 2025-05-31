@@ -1,48 +1,46 @@
 body {
-  background: #076585;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+	background: linear-gradient(to right, #f8d7da, #f0f0f0);
+	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
 	margin: 0;
 }
 
 :root {
-	--primary: rgb(184, 227, 249);
-	--secondary: rgb(154, 154, 154);
-	--shades: rgb(1, 1, 1)
+	--primary: #f8d7da /*#fffcdc*/; 
+	--secondary: #F7949C;
+	--shades: rgb(0, 0, 0);
 }
 
 * {
 	scroll-behavior: smooth;
 }
 
-.header,
-.proyectos,
-.habilidades,
-.experiencia,
-.formacion,
-.contacto {
-  min-height: 100vh;
+.projects,
+.skills,
+.experiencies,
+.training,
+.contact {
+  min-height: 50vh;
   padding-bottom: 4rem;
 }
 
 .header,
-.proyectos,
-.habilidades,
-.experiencia,
-.formacion,
-.contacto,
+.projects,
+.skills,
+.experiencies,
+.training,
+.contact,
 .footer {
 	position: relative;
 }
 
 .header h1,
-.proyectos h1,
-.habilidades h1,
-.experiencia h1,
-.formacion h1,
-.contacto h1 {
+.projects h1,
+.skills h1,
+.experiencies h1,
+.training h1,
+.contact h1 {
 	margin: 0;
 	position: absolute;
 	top: 50%;
@@ -52,11 +50,16 @@ body {
 
 .header {
 	background-color: var(--primary);
+	height: 90vh;
 }
 
 .containerFluid{
-	display: flex;
-	padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  max-height: calc(100vh - 60px);
 }
 
 .containerPhoto {
@@ -75,23 +78,23 @@ body {
 
 .name {
   font-family: 'Thesignature', cursive;
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: bold;
 }
 
 .img-fluid {
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
 
 }
 
 .tittleJob {
-	font-size: clamp(10px, 2vw, 40px);
+	font-size: clamp(10px, 2vw, 35px);
 	font-weight: bold;
 }
 
 .description {
-	font-size: clamp(10px, 2vw, 20px);
+	font-size: clamp(10px, 2vw, 15px);
 	text-align: justify;
   	text-justify: inter-word;
 
@@ -108,6 +111,7 @@ body {
 	padding-top: .5em;
 	padding-bottom: .5em;
 	background-color: var(--primary);
+	backdrop-filter: blur(5px);
 	-webkit-box-shadow: 0 14px 14px -14px rgba(0, 0, 0, .75);
 	-moz-box-shadow: 0 14px 14px -14px rgba(0, 0, 0, .75);
 	box-shadow: 0 14px 14px -14px rgba(0, 0, 0, .75);
@@ -369,7 +373,7 @@ body {
 }
 
 .typewriter {
-  font-size: clamp(10px, 2vw, 20px);
+  font-size: clamp(10px, 2vw, 15px);
   white-space: normal;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -414,12 +418,12 @@ body {
 	background-color: rgb(45, 45, 45);
 }
 
-.footerDerechos { 
+.footerRights { 
   text-align: center;
   align-items: center;
 }
 
-.politica {
+.politics {
   color: white;
   text-align: center;
 }
@@ -437,6 +441,7 @@ body {
 	justify-content: space-between;
 	gap: 2vw;
 	margin-top: 170px;
+
 }
 
 .carousel .slider-wrapper div {
@@ -459,8 +464,8 @@ body {
 	padding: 2vw 4vw;
 }
 .carousel .slide-date {
-	color: #0a8acb; 
-	font-size: 1.1vw; 
+	color: #009990; 
+	font-size: 1.5vw; 
 	font-weight: 400; 
 	letter-spacing: 0.1vw; 
 	padding-bottom: 1.4vw;
@@ -489,7 +494,7 @@ body {
 .carousel .slide-bullet {
 	width: 0.5vw; 
 	height: 0.5vw; 
-	background-color: #0b8bcc; 
+	background-color: #009990; 
 	border-radius: 200%; 
 	position: relative; 
 	margin-left: 1.2vw;
@@ -523,14 +528,14 @@ body {
 	height: 1.2vw; 
 	background: transparent; 
 	text-indent: -9999px; 
-	border-top: 0.15vw solid #fff; 
-	border-left: 0.15vw solid #fff; 
+	border-top: 0.15vw solid #000000; 
+	border-left: 0.15vw solid #000000; 
 	transition: all .1s ease-in-out; 
 	text-decoration: none; 
 	color: transparent;
 }
 .carousel .arrow:hover {
-	border-color: #0A8ACB; 
+	border-color: #F7949C; 
 	border-width: 0.25vw;
 }
 .carousel .arrow:before {
@@ -549,3 +554,505 @@ body {
 	transform: rotate(135deg); 
 	right: 0;
 }
+
+hr {
+  border: none;
+  border-top: 5px solid rgba(255,255,255,.3);
+  border-bottom: 5px solid rgba(0,0,0,.08);
+  margin: 2.5em 0;
+  position: relative;
+}
+hr:before,hr:after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  height: 5em;
+  width: 100%;
+  background: radial-gradient(ellipse at bottom, rgba(255,255,255,0.35) 0%,rgba(255,255,255,0) 70%);
+  z-index:0;
+}
+hr:after {
+  top:0px;
+  bottom:auto;
+  height: 5em;
+  background: radial-gradient(ellipse at top, rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 70%);
+}
+
+/* skills */
+
+.skill {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	padding: 2vw;
+	padding-top: 10vw;
+}
+
+.skill h3 {
+	text-align: center;
+}
+
+.images {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	min-height: 100px;
+
+}
+
+.images .img {
+	height: 50px;
+  	width: auto;
+}
+
+.progress-1 {
+  width:300px;
+  height:22px;
+  border-radius: 20px;
+  color:#009990;
+  border:2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+/* skill Java */
+.java::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:java 2s forwards;
+}
+@keyframes java {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill Python */
+.python::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:python 2s forwards;
+}
+@keyframes python {
+	100% {
+    	inset: 0 60% 0 0;
+  	}
+}
+
+/* skill SQL */
+.sql::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:sql 2s forwards;
+}
+@keyframes sql {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill NoSQL */
+.nosql::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:nosql 2s forwards;
+}
+@keyframes nosql {
+	100% {
+    	inset: 0 50% 0 0;
+  	}
+}
+
+/* skill HTML */
+.html::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:html 2s forwards;
+}
+@keyframes html {
+	100% {
+    	inset: 0 50% 0 0;
+  	}
+}
+
+.progress-2 {
+  width:300px;
+  height:22px;
+  border-radius: 20px;
+  color:#009990;
+  border:2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+/* skill React */
+.react::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:react 2s forwards;
+}
+@keyframes react {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill Spring Boot */
+.spring::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:spring 2s forwards;
+}
+@keyframes spring {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill React Three Fiber */
+.react3::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:react3 2s forwards;
+}
+@keyframes react3 {
+	100% {
+    	inset: 0 70% 0 0;
+  	}
+}
+
+/* skill WordPress */
+.wordpress::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:wordpress 2s forwards;
+}
+@keyframes wordpress {
+	100% {
+    	inset: 0 50% 0 0;
+  	}
+}
+
+.progress-3 {
+  width:300px;
+  height:22px;
+  border-radius: 20px;
+  color:#009990;
+  border:2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+/* skill Git */
+.git::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:git 2s forwards;
+}
+@keyframes git {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill Eclipse */
+.eclipse::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:eclipse 2s forwards;
+}
+@keyframes eclipse {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill Visual Studio */
+.visual::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:visual 2s forwards;
+}
+@keyframes visual {
+	100% {
+    	inset: 0 30% 0 0;
+  	}
+}
+
+/* skill Android Studio */
+.android::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:currentColor;
+  animation:android 2s forwards;
+}
+@keyframes android {
+	100% {
+    	inset: 0 70% 0 0;
+  	}
+}
+
+/* Vertical Timeline */
+
+.experience {
+	padding-top: 12vw;
+}
+
+.experience .logo {
+	max-width: 20%;
+  	height: auto;
+}
+
+.experience .logo1 {
+	max-width: 30%;
+  	height: auto;
+}
+
+.experience .exp {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.experience .work {
+	font-size: 100%;
+	text-align: center;
+}
+
+.experience .work1 {
+	font-size: 100%;
+	text-align: center;
+	padding-top: 2vw;
+}
+
+#conference-timeline {
+  position: relative;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+#conference-timeline .timeline-start,
+#conference-timeline .timeline-end {
+  display: table;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #F7949C;
+  padding: 15px 23px;
+  color: #fff;
+  max-width: 5%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  background: #F7949C;
+  z-index: -1;
+}
+#conference-timeline .conference-timeline-content {
+  padding-top: 67px;
+  padding-bottom: 67px;
+}
+.timeline-article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.timeline-article .content-left-container,
+.timeline-article .content-right-container {
+  max-width: 44%;
+  width: 100%;
+}
+.timeline-article .timeline-author {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  text-align: right;
+}
+.timeline-article .content-left,
+.timeline-article .content-right {
+  position: relative;
+  width: auto;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.03);
+  padding: 27px 25px;
+}
+.timeline-article p {
+  margin: 0 0 0 60px;
+  padding: 0;
+  font-weight: 400;
+  color: #242424;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+}
+.timeline-article p span.article-number {
+  position: absolute;
+  font-weight: 300;
+  font-size: 44px;
+  top: 10px;
+  left: -60px;
+  color: #F7949C;
+}
+.timeline-article .content-left-container {
+  float: left;
+}
+.timeline-article .content-right-container {
+  float: right;
+}
+.timeline-article .content-left:before,
+.timeline-article .content-right:before{
+  position: absolute;
+  top: 20px;
+  font-size: 23px;
+  font-family: "FontAwesome";
+  color: #000000;
+}
+.timeline-article .content-left:before {
+  content: "\f0da";
+  right: -8px;
+}
+.timeline-article .content-right:before {
+  content: "\f0d9";
+  left: -8px;
+}
+.timeline-article .meta-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 62px;
+  height: 62px;
+  margin-left: -31px;
+  color: #fff;
+  border-radius: 100%;
+  background: #F7949C;
+}
+.timeline-article .meta-date .date,
+.timeline-article .meta-date .month {
+  display: block;
+  text-align: center;
+  font-weight: 900;
+}
+.timeline-article .meta-date .date {
+  font-size: 20px;
+  line-height: 40px;
+}
+.timeline-article .meta-date .month {
+  font-size: 15px;
+  line-height: 10px;
+}
+/*===== // Vertical Timeline =====*/
+
+/*===== Resonsive Vertical Timeline =====*/
+@media only screen and (max-width: 830px) {
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    margin: 0;
+  }
+  #conference-timeline .conference-center-line {
+    margin-left: 0;
+    left: 50px;
+  }
+  .timeline-article .meta-date {
+    margin-left: 0;
+    left: 20px;
+  }
+  .timeline-article .content-left-container,
+  .timeline-article .content-right-container {
+    max-width: 100%;
+    width: auto;
+    float: none;
+    margin-left: 110px;
+    min-height: 53px;
+  }
+  .timeline-article .content-left-container {
+    margin-bottom: 20px;
+  }
+  .timeline-article .content-left,
+  .timeline-article .content-right {
+    padding: 10px 25px;
+    min-height: 65px;
+  }
+  .timeline-article .content-left:before {
+    content: "\f0d9";
+    right: auto;
+    left: -8px;
+  }
+  .timeline-article .content-right:before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .timeline-article p {
+    margin: 0;
+  }
+  .timeline-article p span.article-number {
+    display: none;
+  }
+  
+}
+
