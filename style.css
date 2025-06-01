@@ -657,10 +657,11 @@ hr:after {
 
 .skill {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: space-evenly;
 	padding: 2vw;
 	padding-top: 10vw;
+	overflow-x: hidden;
 }
 
 .skill h3 {
