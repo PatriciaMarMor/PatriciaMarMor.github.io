@@ -922,6 +922,30 @@ hr:after {
   	}
 }
 
+@media screen and (max-width: 768px) {
+  .skill {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .skill section {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .images {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .d-flex.vr {
+    display: none !important; /* quita el separador vertical */
+  }
+}
+
 /* Vertical Timeline */
 
 .experience {
@@ -1137,5 +1161,13 @@ hr:after {
     display: none;
   }
   
+}
+
+@media screen and (max-width: 768px) {
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    max-width: 40px;
+    margin: 0 auto;
+  }
 }
 
