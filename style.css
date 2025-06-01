@@ -7,7 +7,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	padding: 0;
-	max-width: 100%;
+	max-width: 100vw;
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
@@ -24,16 +24,6 @@ body {
 
 * {
 	scroll-behavior: smooth;
-}
-
-.containerFluid,
-.carousel,
-.timeline-article,
-.slider,
-.skill,
-.row {
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 .projects,
@@ -298,12 +288,16 @@ body {
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 100%;
+		height: 100vh;
 		width: 100%;
 		z-index: -1;
 		background-color: var(--primary);
-		opacity: 0;
-		transition: all 0.2s ease;
+		z-index: 1000;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease;
 	}
 
 	.nav .nav__items {
@@ -313,6 +307,7 @@ body {
 		width: 100%;
 		max-width: 100vw;
 		padding-inline-start: 0;
+		margin-bottom: 1rem;
 	}
 
 	.nav .nav__items .nav__item {
@@ -321,7 +316,7 @@ body {
 		width: 100%;
 		max-width: 100vw;
 		text-align: right;
-		margin-bottom: 10px;
+		margin-bottom: 1rem;
 	}
 
 	.nav .nav__items .nav__item:nth-child(1) a {
@@ -348,10 +343,11 @@ body {
 		padding: 10px 25px;
 		opacity: 0;
 		color: var(--shades);
-		font-size: 24px;
 		font-weight: 600;
 		transform: translateY(-20px);
 		transition: all 0.2s ease;
+		font-size: 1.5rem;
+  		text-align: center;
 	}
 
 	.nav .nav__items .nav__item .nav__link:hover {
@@ -523,24 +519,19 @@ body {
 .carousel .slider-wrapper {
 	margin-top: 5vw;  
 	margin-left: 11vw;
-	overflow-x: hidden;
-
 }
 .carousel .slide-image {
 	height: 24vw;
 }
 .carousel .slide-image img {
 	width: 24vw; 
-	height: auto;
-	max-width: 100vw;
 	cursor: pointer;
 }
 .carousel .slide-content {
 	width: 30vw; 
-	height: auto;
-	max-width: 100vw;
 	color: #000000; 
 	padding: 2vw 4vw;
+	
 }
 .carousel .slide-date {
 	color: #009990; 
@@ -586,7 +577,6 @@ body {
 
 .carousel div.overlay-blue {
 	width: 100%; 
-	max-width: 100vw;
 	height: 100%; 
 	position: absolute; 
 	top: 0; 
@@ -598,7 +588,6 @@ body {
 
 .carousel .arrows{
 	width: 3.5vw; 
-	max-width: 100vw;
 	margin-top: -5.8vw; 
 	margin-left: 72vw; 
 	position: relative;
@@ -607,7 +596,6 @@ body {
 	display: inline-block; 
 	position: absolute; 
 	width: 1.2vw; 
-	max-width: 100vw;
 	height: 1.2vw; 
 	background: transparent; 
 	text-indent: -9999px; 
@@ -625,7 +613,6 @@ body {
 	display: block; 
 	height: 200%; 
 	width: 200%; 
-	max-width: 100vw;
 	margin-left: -50%; 
 	margin-top: -50%; 
 	content: ""; 
