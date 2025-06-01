@@ -4,6 +4,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
 	margin: 0;
+	max-width: 100vw;
 }
 
 :root {
@@ -56,6 +57,7 @@ body {
 .containerFluid{
   display: flex;
   flex-direction: row;
+  
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem;
@@ -66,7 +68,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 100px;
+	padding-top: 9%;
 }
 
 .containerDescription {
@@ -78,7 +80,7 @@ body {
 
 .name {
   font-family: 'Thesignature', cursive;
-	font-size: 60px;
+	font-size: 5vw;
 	font-weight: bold;
 }
 
@@ -89,7 +91,7 @@ body {
 }
 
 .tittleJob {
-	font-size: clamp(10px, 2vw, 35px);
+	font-size: clamp(2vw, 2vw, 10vw);
 	font-weight: bold;
 }
 
@@ -104,6 +106,36 @@ body {
   height: 50px;
   width: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .containerFluid {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .experiencia .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
 
 /* Navbar */
 
