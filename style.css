@@ -9,6 +9,7 @@ body {
 	padding: 0;
 	max-width: 100%;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -165,6 +166,7 @@ body {
 /* Navbar */
 
 .navbar {
+	position: fixed;
 	padding-top: .5em;
 	padding-bottom: .5em;
 	background-color: var(--primary);
@@ -502,7 +504,7 @@ body {
 	justify-content: space-between;
 	gap: 2vw;
 	margin-top: 170px;
-
+	
 }
 
 .carousel .slider-wrapper div {
