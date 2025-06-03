@@ -85,7 +85,7 @@ main {
 }
 
 .tittleJob {
-	font-size: clamp(15px, 2vw, 20px);
+	font-size: clamp(12px, 2vw, 20px);
 	font-weight: bold;
 }
 
@@ -138,9 +138,10 @@ main {
 
 @media screen and (max-width: 768px) {
   .containerFluid {
+    margin-top: 0.5vw;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .img-fluid {
