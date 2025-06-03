@@ -580,14 +580,14 @@ main {
   .carousel .slide-title {
     font-size: clamp(15px, 2vw, 15px);
     letter-spacing: 0.1vw; 
-    line-height: 3vw; 
+    line-height: 5vw; 
     padding-bottom: 2.5vw;
   }
   .carousel .slide-text {
-    font-size: clamp(15px, 2vw, 15px);
+    font-size: clamp(14px, 2vw, 15px);
     text-align: justify;
     text-justify: inter-word;
-    line-height: 3.5vw; 
+    line-height: 5vw; 
     opacity: 0.8; 
     padding-bottom: 1vw;
   }
